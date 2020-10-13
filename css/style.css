@@ -20,7 +20,6 @@ body {
   padding: 8rem 2.4rem;
   background: url("../images/bg-pattern-top-mobile.svg") left top, url("../images/bg-pattern-bottom-mobile.svg") right bottom;
   background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .social-proof {
@@ -126,10 +125,10 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding: 13rem 2.4rem;
     height: 100vh;
     background: url("../images/bg-pattern-top-desktop.svg") left top, url("../images/bg-pattern-bottom-desktop.svg") right bottom;
     background-repeat: no-repeat;
-    background-size: contain;
   }
   .social-proof {
     display: -ms-grid;
