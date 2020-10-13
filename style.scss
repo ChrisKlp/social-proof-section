@@ -1,0 +1,214 @@
+$color-very-dark-magenta: hsl(300, 43%, 22%);
+$color-soft-pink: hsl(333, 80%, 67%);
+$color-dark-grayish-magenta: hsl(303, 10%, 53%);
+$color-light-grayish-magenta: hsl(300, 24%, 96%);
+$color-white: hsl(0, 0%, 100%);
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.5rem;
+}
+.wrapper {
+    padding: 8rem 2.4rem;
+    background: url('../images/bg-pattern-top-mobile.svg') left top, url('../images/bg-pattern-bottom-mobile.svg') right bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.social-proof {
+    margin: auto;
+    max-width: 44.5rem;
+
+    &__header {
+        text-align: center;
+    }
+
+    &__ratings {
+        margin-bottom: 4.8rem;
+    }
+
+    &__heading {
+        margin-bottom: 2.2rem;
+        color: $color-very-dark-magenta;
+        font-size: 3.2rem;
+        letter-spacing: -0.1rem;
+        line-height: 100%;
+    }
+
+    &__header-text {
+        margin-bottom: 3.6rem;
+        letter-spacing: -0.08rem;
+        color: $color-dark-grayish-magenta;
+        line-height: 170%;
+        font-weight: 500;
+    }
+}
+
+.rating {
+    margin-bottom: 1.5rem;
+    padding: 1.6rem;
+    background-color: $color-light-grayish-magenta;
+    border-radius: 0.8rem;
+    text-align: center;
+    overflow: hidden;
+
+    &__stars {
+        margin-bottom: 1.1rem;
+
+        img {
+            margin: 0 0.3rem;
+        }
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: $color-very-dark-magenta;
+    }
+}
+
+.testimonial {
+    margin-bottom: 1.6rem;
+    padding: 4rem 3.4rem 3.2rem;
+    background-color: $color-very-dark-magenta;
+    color: $color-white;
+    border-radius: 0.8rem;
+    overflow: hidden;
+
+    &__author {
+        margin-bottom: 2.6rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__author-image {
+        width: 4rem;
+        height: auto;
+        border-radius: 50%;
+    }
+
+    &__caption {
+        margin-left: 2.6rem;
+        font-size: 1.3rem;
+    }
+
+    &__name {
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    &__verify {
+        color: $color-soft-pink;
+    }
+
+    &__message {
+        font-size: 1.3rem;
+        color: $color-white;
+        line-height: 174%;
+        letter-spacing: -0.01rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .wrapper {
+        display: flex;
+        height: 100vh;
+        background: url('../images/bg-pattern-top-desktop.svg') left top, url('../images/bg-pattern-bottom-desktop.svg') right bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .social-proof {
+        display: grid;
+        grid: repeat(2, auto) / repeat(2, 1fr);
+        max-width: 111rem;
+
+        &__header {
+            grid-area: 1 / 1 / 2 / 2;
+            padding-right: 10%;
+            text-align: left;
+        }
+
+        &__ratings {
+            grid-area: 1 / 2 / 2 / -1;
+            display: flex;
+            flex-flow: column;
+        }
+
+        &__testimonials {
+            grid-area: 2 / 1 / -1 / -1;
+            display: flex;
+            justify-content: space-between;
+            gap: 0.6rem;
+        }
+    }
+
+    .rating {
+        display: flex;
+        align-items: center;
+        padding: 1.8rem 0;
+        width: 44.5rem;
+
+        &:nth-child(2) {
+            align-self: center;
+        }
+
+        &:nth-child(3) {
+            align-self: flex-end;
+        }
+
+        &__stars {
+            margin: 0 2.6rem;
+        }
+    }
+
+    .testimonial {
+        max-width: 35rem;
+        padding: 4rem 3.4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .social-proof {
+        gap: 2.4rem 2rem;
+
+        &__header {
+            padding-right: 20%;
+        }
+
+        &__ratings {
+            margin-top: 1.5rem;
+        }
+
+        &__heading {
+            margin-bottom: 1.2rem;
+            font-size: 4.8rem;
+        }
+
+        &__header-text {
+            letter-spacing: -0.05rem;
+        }
+    }
+
+    .testimonial {
+        &:nth-child(2) {
+            transform: translateY(1.6rem);
+        }
+
+        &:nth-child(3) {
+            transform: translateY(3.2rem);
+        }
+    }
+}
