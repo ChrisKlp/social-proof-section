@@ -122,6 +122,7 @@ body {
 
 @media (min-width: 768px) {
     .wrapper {
+        padding: 2.4rem;
         display: flex;
         height: 100vh;
         background: url('../images/bg-pattern-top-desktop.svg') left top, url('../images/bg-pattern-bottom-desktop.svg') right bottom;

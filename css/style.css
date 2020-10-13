@@ -122,6 +122,7 @@ body {
 
 @media (min-width: 768px) {
   .wrapper {
+    padding: 2.4rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
